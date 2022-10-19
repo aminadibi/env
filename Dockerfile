@@ -6,6 +6,7 @@ RUN add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu jammy-c
 #RUN add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/'
 RUN add-apt-repository ppa:c2d4u.team/c2d4u4.0+
 RUN apt-get update
+RUN DEBIAN_FRONTEND=noninteractive TZ=America/Vancouver apt-get -y install tzdata
 RUN apt-get install -y r-base 
 RUN apt-get install -y r-base-dev
 RUN apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev
