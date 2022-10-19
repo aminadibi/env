@@ -5,5 +5,4 @@ RUN sudo apt update
 RUN sudo apt install -y -t buster-cran40 r-base libxml2-dev libcurl4-openssl-dev libssl-dev libmariadbclient-dev
 RUN sudo R -e "install.packages(c('IRkernel', 'tidyverse', 'tidymodels', 'remotes'), repos='http://cran.rstudio.com/', dependencies=TRUE)"
 RUN R -e "IRkernel::installspec()"
-RUN sudo usermod -a -G staff jovyan
 ENV DEFAULT_KERNEL_NAME "ir"
