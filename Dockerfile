@@ -3,7 +3,7 @@ RUN sudo apt-get update
 RUN sudo apt-get install -y dirmngr gnupg apt-transport-https ca-certificates software-properties-common
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 RUN add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/'
-RUN add-apt-repository ppa:c2d4u.team/c2d4u4.0+
+#RUN add-apt-repository ppa:c2d4u.team/c2d4u4.0+
 RUN sudo apt-get update
 RUN sudo apt-get install -y r-base 
 RUN sudo apt-get install -y r-base-dev
