@@ -10,7 +10,8 @@ RUN DEBIAN_FRONTEND=noninteractive TZ=America/Vancouver apt-get -y install tzdat
 RUN apt-get install -y r-base 
 RUN apt-get install -y r-base-dev
 RUN apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev
-RUN R -e 'install.packages("tidyverse")'
+RUN apt-get install -y r-cran-tidyverse
+# RUN R -e 'install.packages("tidyverse")'
 # FROM rocker/tidyverse:latest
 # Install Jupyter
 #RUN /rocker_scripts/install_jupyter.sh
