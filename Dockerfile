@@ -1,4 +1,5 @@
 FROM deepnote/python:3.10
+RUN pip install jupyter_client
 RUN echo "deb http://cloud.r-project.org/bin/linux/debian buster-cran40/" | sudo tee -a /etc/apt/sources.list 
 RUN sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key '95C0FAF38DB3CCAD0C080A7BDC78B2DDEABC47B7'
 RUN sudo apt update 
